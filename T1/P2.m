@@ -18,7 +18,7 @@ ft = f0*0.1 + f1*0.9;
 
 %%
 %1.c
-q=10^(-5);
+q=10^(-7);
 f = 0;
 for i=0:1000
     f0= 1 - probBinRand(64+i, 0, q) - probBinRand(64+i, 1, q);
@@ -44,6 +44,31 @@ for i=0:1000
     f1= probGeoRand(0.02, i);
     f = f + f0 * f1;
 end
-ft
-f
+ft;
+f;
+
+%%
+%2.a
+p = 0.99999;
+pn = p;
+pi = 1-p;
+
+pen = 0.0001;
+pei = 0.5;
+
+pne = pen * pn / (pen*pn+pei*pi);
+pie = 1-pne;
+
+%%
+%2.b
+
+
+
+
+
+
+
+
+
+
 
